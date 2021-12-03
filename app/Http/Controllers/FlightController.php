@@ -88,6 +88,9 @@ class FlightController extends Controller
      */
     public function destroy(Flight $flight)
     {
-        //
+        $flight->delete();
+
+        return redirect()->route('airports.index')
+            ->with('success', 'Flight deleted successfully');
     }
 }
