@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Flight;
+use App\Models\Airport;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 
@@ -28,7 +29,7 @@ class FlightFactory extends Factory
             'reference' => Str::upper(Str::random(3)),
             'brand' => Arr::random(array("Boeing","Airbus")),
             'capacity'=> rand(0, 250),
-            'airport_id'=> 1,
+            'airport_id'=> Airport::all()->random()->id,
         ];
     }
 }
