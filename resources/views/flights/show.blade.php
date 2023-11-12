@@ -44,11 +44,7 @@
 
                 <select name="airport_id" id="cars">
                     @foreach ($airports as $airport )
-                    @if ($airport->id==$flight->airport->id)
-                    <option value="{{$airport->id}}" selected>{{ $airport->name}}</option>
-                    @else
                     <option value="{{$airport->id}}">{{ $airport->name}}</option>
-                    @endif
                     @endforeach
                 </select>
 

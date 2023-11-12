@@ -66,7 +66,7 @@
         <td>{{ $flight->reference }}</td>
         <td>{{ $flight->brand }}</td>
         <td>{{ $flight->capacity }}</td>
-        <td>{{ $flight->airport->name }}</td>
+        <td>{{ $flight->airport_id }}</td>
         <td>
             <form action="{{ route('flights.destroy',$flight->id) }}" method="POST">
 

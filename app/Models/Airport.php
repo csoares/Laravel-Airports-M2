@@ -12,9 +12,4 @@ class Airport extends Model
     protected $fillable = [
         'name', 'city', 'reference',
     ];
-
-    public function flights()
-    {
-        return $this->hasMany(Flight::class, 'airport_id', 'id');
-    }
 }
